@@ -62,6 +62,7 @@ jobs:
       with:
         inlineScript: >
           echo "Creating resources"
+          ls -alH
           echo "Executing az deployment group create --resource-group ${{ env.RESOURCE_GROUP_NAME }} --template-file './Azure/main.bicep' --debug"
 
           az deployment group create --resource-group ${{ env.RESOURCE_GROUP_NAME }} --template-file './Azure/main.bicep' --debug
